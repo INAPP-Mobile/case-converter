@@ -77,6 +77,34 @@ function truncate(str: string, len: number): string {
   return str.slice(0, len) + "...";
 }
 
+function ContentSection() {
+  return (
+    <section className="max-w-3xl mx-auto mt-16 space-y-8 text-gray-300 text-sm leading-relaxed">
+      <div className="bg-gray-800/50 border border-gray-700/50 rounded-xl p-6 space-y-4">
+        <h2 className="text-lg font-semibold text-white">About This Tool</h2>
+        <p>Convert text between camelCase, PascalCase, snake_case, kebab-case, and many other case formats. Perfect for developers working across different coding conventions.</p>
+        <h3 className="text-base font-semibold text-white">Common Use Cases</h3>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Converting variable names between coding conventions</li>
+          <li>Formatting titles and headings in different styles</li>
+          <li>Normalizing user input for consistent storage</li>
+          <li>Preparing identifiers for different programming languages</li>
+        </ul>
+        <h3 className="text-base font-semibold text-white">Pro Tips</h3>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Use camelCase for JavaScript variables and functions</li>
+          <li>PascalCase for class names and components</li>
+          <li>snake_case for database columns and Python variables</li>
+          <li>kebab-case for URLs and file names</li>
+        </ul>
+        <p className="text-gray-400 text-xs mt-4">
+          Part of the <a href="https://freeq.one" className="text-blue-400 hover:underline">FreeQ.One</a> tools suite. Also try our <a href="https://words.freeq.one" className="text-blue-400 hover:underline">word counter</a>.
+        </p>
+      </div>
+    </section>
+  )
+}
+
 const INPUT_STORAGE_KEY = "case-input";
 
 export default function Home() {
@@ -395,6 +423,8 @@ export default function Home() {
           </p>
         </div>
       </div>
+
+      <ContentSection />
 
       <Script
         async
